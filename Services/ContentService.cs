@@ -12,22 +12,23 @@ namespace Home
 {
     public class ContentService
     {
+        static readonly string BASE = "https://raw.githubusercontent.com/Herdubreid/home-content/master/docs/";
         HttpClient Http { get; }
         public async Task<Content.VideoPost[]> GetLinkedinPostsAsync()
         {
-            return await Http.GetJsonAsync<Content.VideoPost[]>("linkedin.json");
+            return await Http.GetJsonAsync<Content.VideoPost[]>($"{BASE}linkedin.json");
         }
         public async Task<Content.VideoPost[]> GetMsdnPostsAsync()
         {
-            return await Http.GetJsonAsync<Content.VideoPost[]>("msdn.json");
+            return await Http.GetJsonAsync<Content.VideoPost[]>($"{BASE}msdn.json");
         }
         public async Task<Content.VideoPost[]> GetYoutubeClipsAsync()
         {
-            return await Http.GetJsonAsync<Content.VideoPost[]>("youtube.json");
+            return await Http.GetJsonAsync<Content.VideoPost[]>($"{BASE}youtube.json");
         }
         public async Task<Content.Nuget[]> GetNugetAsync()
         {
-            var nuget = await Http.GetJsonAsync<Content.Nuget[]>("nuget.json");
+            var nuget = await Http.GetJsonAsync<Content.Nuget[]>($"{BASE}nuget.json");
             foreach (var n in nuget)
             {
                 var rs = await Http.GetAsync($"https://azuresearch-usnc.nuget.org/query?q=PackageId:{n.PackageId}");
