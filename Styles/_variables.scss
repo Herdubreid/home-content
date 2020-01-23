@@ -17,7 +17,7 @@ $gray-800: #333 !default;
 $gray-900: #222 !default;
 $black: #000 !default;
 
-$blue: #EB6864 !default;
+$blue: #FF500D!default;
 $indigo: #6610f2 !default;
 $purple: #6f42c1 !default;
 $pink: #e83e8c !default;
@@ -29,12 +29,12 @@ $teal: #20c997 !default;
 $cyan: #369 !default;
 
 $primary: $blue !default;
-$secondary: $gray-500 !default;
+$secondary: $gray-200 !default;
 $success: $green !default;
 $info: $cyan !default;
 $warning: $yellow !default;
 $danger: $red !default;
-$light: $gray-100 !default;
+$light: $white !default;
 $dark: $gray-900 !default;
 
 // Fonts
