@@ -1,0 +1,34 @@
+﻿@inject ContentService  Content
+
+@if (Nugets != null)
+{
+    <div class="card-deck justify-content-center">
+        @foreach (var n in Nugets)
+        {
+            <div class="card shadow m-2">
+                <div class="card-body">
+                    <div class="row card-title">
+                        <img src="@n.Data?.iconUrl" style="height: 45px; position: absolute; top: 5px" />
+                        <a class="col" href="@n.Data?.projectUrl" target="_blank">
+                            <h5 class="text-center">@n.Data?.title</h5>
+                        </a>
+                        <small class="col-auto">Lastest @n.Data?.version</small>
+                        <small class="col-auto">@n.Data?.totalDownloads Downloads</small>
+                    </div>
+                    <div class="col card-text">
+                        <p>@n.Data.description</p>
+                        <p>@n.Comments</p>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+}
+
+@code {
+    Content.Nuget[] Nugets { get; set; }
+    protected override async Task OnInitializedAsync()
+    {
+        Nugets = await Content.GetNugetAsync();
+    }
+}

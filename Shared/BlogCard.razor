@@ -1,0 +1,17 @@
+﻿
+<div class="card shadow m-2">
+    <div class="card-body">
+        <div class="row card-title">
+            <h5 class="col">@Post.Title</h5>
+            <small class="col-auto">@Post.Date.ToString("MMMM dd, yyyy")</small>
+        </div>
+        <p class="col card-text">
+            @Post.Intro<a href="@($"https://blog.celin.io/{Post.Href}")" target="_blank">READ</a>
+        </p>
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public Content.BlogPost Post { get; set; }
+}

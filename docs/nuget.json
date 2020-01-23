@@ -1,0 +1,14 @@
+[
+  {
+    "PackageId": "Celin.AIS",
+    "Comments": "Get started with E1 AIS in .Net"
+  },
+  {
+    "PackageId": "BlazorPWA.MSBuild",
+    "Comments": "Give blazor Web App the look and feel of a Native App"
+  },
+  {
+    "PackageId": "Blazor.Extensions.Storage",
+    "Comments": "Local Data storage"
+  }
+]

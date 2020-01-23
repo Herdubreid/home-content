@@ -1,0 +1,46 @@
+﻿@inject ContentService Content
+
+<div class="card shadow mt-2">
+    @if (YoutubeClips == null)
+    {
+        <div class="card-body">
+            <i class="fas fa-spinner fa-spin"></i>
+        </div>
+    }
+    else
+    {
+        <iframe class="card-img-top" height="316" width="556" src="@Clip.Post" frameborder="0"></iframe>
+        <div class="card-body">
+            <div class="row justify-content-between card-title">
+                <div class="col-auto">
+                    <button class="btn btn-light" type="button" @onclick="@(() => Index = --Index < 0 ? YoutubeClips.Length - 1 : Index)">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                </div>
+                <h5 class="col">@Clip.Title</h5>
+                <div class="col-auto">
+                    <button class="btn btn-light" type="button" @onclick="@(() => Index = ++Index % YoutubeClips.Length)">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+            @foreach (var p in Clip.Body)
+            {
+                <p>@p</p>
+            }
+        </div>
+    }
+</div>
+
+
+@code {
+    Content.VideoPost Clip => YoutubeClips[Index];
+    int Index { get; set; }
+    Content.VideoPost[] YoutubeClips { get; set; }
+    protected override async Task OnInitializedAsync()
+    {
+        YoutubeClips = await Content.GetYoutubeClipsAsync();
+        var rand = new Random();
+        Index = rand.Next(0, YoutubeClips.Length - 1);
+    }
+}

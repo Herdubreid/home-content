@@ -1,0 +1,48 @@
+﻿@inject ContentService Content
+
+<div class="card shadow mt-2">
+    @if (MsdnPosts == null)
+    {
+        <div class="card-body">
+            <i class="fas fa-spinner fa-spin"></i>
+        </div>
+    }
+    else
+    {
+        <iframe class="card-img-top" height="316" width="556" src="@Post.Post" frameborder="0"></iframe>
+        <div class="card-body">
+            <div class="row justify-content-between card-title">
+                <div class="col-auto">
+                    <button class="btn btn-light" type="button"
+                            @onclick="@(() => Index = --Index < 0 ? MsdnPosts.Length - 1 : Index)">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                </div>
+                <h5 class="col">@Post.Title</h5>
+                <div class="col-auto">
+                    <button class="btn btn-light" type="button"
+                            @onclick="@(() => Index = ++Index % MsdnPosts.Length)">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+            @foreach (var p in Post.Body)
+            {
+                <p>@p</p>
+            }
+        </div>
+    }
+</div>
+
+
+@code {
+    Content.VideoPost Post => MsdnPosts[Index];
+    int Index { get; set; } = 0;
+    Content.VideoPost[] MsdnPosts { get; set; }
+    protected override async Task OnInitializedAsync()
+    {
+        MsdnPosts = await Content.GetMsdnPostsAsync();
+        var rand = new Random();
+        Index = rand.Next(0, MsdnPosts.Length - 1);
+    }
+}

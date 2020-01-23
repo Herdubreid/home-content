@@ -1,0 +1,23 @@
+[
+  {
+    "Post": "https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:6624869662670843904?compact=1",
+    "Title": "Why Blazor is a Big-Thing",
+    "Body": [
+      "Truely build once and deploy everywhere.. as close as it get!"
+    ]
+  },
+  {
+    "Post": "https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:6623092211485638656?compact=1",
+    "Title": "Serverless Blazor Client",
+    "Body": [
+      "Deploy logic to Azure Functions."
+    ]
+  },
+  {
+    "Post": "https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:6614451597047099392?compact=1",
+    "Title": "Purchase Order Receipting",
+    "Body": [
+      "Install a Web app on your iPhone to make it behave as a local app."
+    ]
+  }
+]

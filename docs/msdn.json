@@ -1,0 +1,16 @@
+[
+  {
+    "Post": "https://channel9.msdn.com/Events/dotnetConf/Focus-on-Blazor/Welcome-to-Blazor/player",
+    "Title": "Blazor Intro",
+    "Body": [
+      "An introduction to Blazor."
+    ]
+  },
+  {
+    "Post": "https://channel9.msdn.com/Events/dotnetConf/Focus-on-Blazor/Create-a-great-UX-with-Blazor/player",
+    "Title": "Style Blazor",
+    "Body": [
+      "User SASS to style your blazor app."
+    ]
+  }
+]

@@ -1,0 +1,26 @@
+﻿@page "/"
+@inject ContentService Content
+
+<div class="row row-cols-1 row-cols-md-3 justify-content-center">
+    <LinkedinCard></LinkedinCard>
+    <MsdnCard></MsdnCard>
+    <YoutubeCard></YoutubeCard>
+</div>
+<NugetCard></NugetCard>
+<div class="card-deck justify-content-center">
+    @if (Blog != null)
+    {
+        foreach (var post in Blog)
+        {
+            <BlogCard Post="@post"></BlogCard>
+        }
+    }
+</div>
+
+@code  {
+    List<Content.BlogPost> Blog { get; set; }
+    protected override async Task OnInitializedAsync()
+    {
+        Blog = await Content.GetBlogPostsAsync();
+    }
+}
