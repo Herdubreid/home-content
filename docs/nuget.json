@@ -4,6 +4,10 @@
     "Comments": "Get started with E1 AIS in .Net"
   },
   {
+    "PackageId": "Blazor-State&semVerLevel=2.0.0",
+    "Comments": "Organise the the App with State"
+  },
+  {
     "PackageId": "BlazorPWA.MSBuild",
     "Comments": "Give blazor Web App the look and feel of a Native App"
   },
