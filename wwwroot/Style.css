@@ -7211,8 +7211,10 @@ a.text-dark:hover, a.text-dark:focus {
 .pagination a:hover {
   text-decoration: none; }
 
-.card {
-  min-width: 556px; }
+@media only screen and (min-width: 600px) {
+  .card {
+    min-width: 556px;
+    max-width: 560px; } }
 
 #blazor-error-ui {
   background: lightyellow;

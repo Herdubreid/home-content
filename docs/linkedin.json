@@ -1,5 +1,19 @@
 [
   {
+    "Post": "https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:6627432625415995392",
+    "Title": "Get started with Aggregation",
+    "Body": [
+      "Group, Count, Sum, Max, Min and more..."
+    ]
+  },
+  {
+    "Post": "https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:6626451136746483712?compact=1",
+    "Title": "Get started with the DataBrowser",
+    "Body": [
+      "Easily dump data from any table of view to spreadsheet."
+    ]
+  },
+  {
     "Post": "https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:6624869662670843904?compact=1",
     "Title": "Why Blazor is a Big-Thing",
     "Body": [

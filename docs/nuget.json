@@ -14,5 +14,9 @@
   {
     "PackageId": "Blazor.Extensions.Storage",
     "Comments": "Local Data storage"
+  },
+  {
+    "PackageId": "Pidgin",
+    "Comments": "Write your own scripting language."
   }
 ]

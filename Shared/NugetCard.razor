@@ -9,11 +9,15 @@
                 <div class="card-body">
                     <div class="row card-title">
                         <img src="@n.Data?.iconUrl" style="height: 45px; position: absolute; top: 5px" />
+                        <div class="col-1">
+                        </div>
                         <a class="col" href="@n.Data?.projectUrl" target="_blank">
                             <h5 class="text-center">@n.Data?.title</h5>
                         </a>
-                        <small class="col-auto">Lastest @n.Data?.version</small>
-                        <small class="col-auto">@n.Data?.totalDownloads Downloads</small>
+                        <div class="col-auto">
+                            <small>Lastest @n.Data?.version</small>
+                            <small>@n.Data?.totalDownloads Downloads</small>
+                        </div>
                     </div>
                     <div class="col card-text">
                         <p>@n.Data.description</p>

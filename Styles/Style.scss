@@ -2,8 +2,11 @@
 @import '../node_modules/bootstrap/scss/bootstrap';
 @import './bootswatch';
 
-.card {
-    min-width: 556px;
+@media only screen and (min-width: 600px) {
+    .card {
+        min-width: 556px;
+        max-width: 560px;
+    }
 }
 
 #blazor-error-ui {

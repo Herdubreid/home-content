@@ -4,6 +4,10 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <RazorLangVersion>3.0</RazorLangVersion>
     <RootNamespace>Home</RootNamespace>
+    <ServiceWorkerForce>true</ServiceWorkerForce>
+    <ManifestShortName>CELIN</ManifestShortName>
+    <ManifestLongName>Celin's Home Page</ManifestLongName>
+    <ServiceWorkerCacheVersion>3</ServiceWorkerCacheVersion>
   </PropertyGroup>
 
   <ItemGroup>
